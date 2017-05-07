@@ -13,7 +13,7 @@ textarea::-webkit-scrollbar {
     width: 10px;
 }
 textarea::-webkit-scrollbar-thumb {
-      background-color: #4974E8;
+    background-color: #4974E8;
     box-shadow: 0px 0px 11px -2px black;
     border-radius: 7px;
 }
@@ -30,23 +30,19 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0 .2rem 1rem;
 	text-shadow: 1px 1px #7e50ff, 2px 2px rgba(0,0,0,.4);
 }
-h1 {font-size: 2.5rem}
 body {
 	background: #5DDDFF;
 	width: 100vw;
 	height: auto;
 	min-height: 100vh;
-	overflow-x: hidden;
 	font-size: 16px;
 	font-family: 'Open Sans', helvetica, sans-serif;
 	font-weight: bold;
 	color: #43646d;
-	overflow-anchor: none;
 }
 .body-wrapper {
-	width: 100vw;
-	height: auto;
-	min-height: 100vh;
+	width: 100%;
+	height: 100%;
 	overflow-x: hidden;
 	overflow-y: visible;
 }
@@ -63,13 +59,20 @@ header {
 label[for=menu] {
 	position: absolute;
 	right: 10%;
-	top: 1.8rem;
+	top: 1.5rem;
 	cursor: pointer;
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 label[for=menu]::after {
     content: '';
@@ -92,7 +95,7 @@ nav{
 	min-width: 200px;
 	height: 100vh;
 	background-color: #704cd6;
-	position: absolute;
+	position: fixed;
 	right: -100vw;
 	top: 0;
 	-webkit-transition: right .5s ease;
@@ -117,6 +120,13 @@ button.emoji {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 button:focus {outline: none;}
 button.emoji:hover {
@@ -156,6 +166,13 @@ textarea {
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 textarea::selection {
   background: #000;
