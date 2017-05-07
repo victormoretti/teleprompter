@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Teleprompter</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="body-wrapper">
+	<input type="checkbox" id="menu" hidden>
+	<header>
+		<h1>Teleprompter</h1>
+		<label for="menu">
+			<span class="fa fa-bars fa-2x" id="menu-bars"></span>
+		</label>
+	</header>
+	<nav>
+		<a href="#">Editor de texto</a>
+		<a href="#">Criador</a>
+		<a href="#">Contato</a>
+	</nav>
+	
+	<main>
+		<div class="controles">
+			<label for="">
+				<p>Velocidade</p>
+				<input type="range" name="velocidade" min="1" max="20">
+			</label>
+			<label for="">
+				<p>Tamanho da fonte</p>
+				<input type="range" name="tamanhoFonte" min="14" max="300">
+			</label>
+			<label for="">
+				<p>Esquema de cores</p>
+				<input type="range" name="cores" min="0" max="5">
+			</label>
+			<label for="">
+				<p>Fonte do texto</p>
+				<input type="range" name="familiaFonte" min="0" max="4">
+			</label>
+			<label for="">
+				<p>Margens laterais</p>
+				<input type="range" name="margem" min="0" max="25">
+			</label>
+		</div>
+		<div class="texto">
+			<textarea name="texto" id="" cols="30" rows="10" autocomplete="off" wrap="soft" ></textarea>
+			<div class="emoji">
+				<button class="emoji" id="emoji1"><img src="assets/img/angel.svg" alt=""></button>
+				<button class="emoji" id="emoji2"><img src="assets/img/angry.svg" alt=""></button>
+				<button class="emoji" id="emoji3"><img src="assets/img/cheers.svg" alt=""></button>
+				<button class="emoji" id="emoji4"><img src="assets/img/happy.svg" alt=""></button>
+				<button class="emoji" id="emoji5"><img src="assets/img/lol.svg" alt=""></button>
+				<button class="emoji" id="emoji6"><img src="assets/img/peace.svg" alt=""></button>
+				<button class="emoji" id="emoji7"><img src="assets/img/poop.svg" alt=""></button>
+				<button class="emoji" id="emoji8"><img src="assets/img/sad.svg" alt=""></button>
+				<button class="emoji" id="emoji9"><img src="assets/img/smartass.svg" alt=""></button>
+				<button class="emoji" id="emoji10"><img src="assets/img/strong.svg" alt=""></button>
+				<button class="emoji" id="emoji11"><img src="assets/img/wow.svg" alt=""></button>
+			</div>
+			<button id="iniciar">Iniciar</button>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+</div>
+<div id="teleprompter"></div>
+<script>
+	const teleprompter = document.getElementById('teleprompter');
+	const options = document.querySelectorAll('input[type=range]');
+	const btnIniciar = document.getElementById('iniciar');
+	let iniciar = true;
+
+	function startTeleprompter() {
+		if(iniciar) {
+			// use necessary prefixed versions
+			teleprompter.webkitRequestFullscreen();
+			teleprompter.mozRequestFullScreen();
+			teleprompter.msRequestFullscreen();
+
+			// finally the standard version
+			teleprompter.requestFullscreen();
+		}
+	}
+	btnIniciar.addEventListener('click', startTeleprompter);
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Raleway" rel="stylesheet">
